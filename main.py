@@ -86,6 +86,6 @@ def create_dictionary(clean_list):
 
 # Driver code
 if __name__ == '__main__':
-	url = "https://www.geeksforgeeks.org/programming-language-choose/"
+	url = "https://"
 	# starts crawling and prints output
 	start(url)
