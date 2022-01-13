@@ -52,7 +52,7 @@ def clean_wordlist(wordlist):
 	create_dictionary(clean_list)
 
 # Creates a dictionary containing each word's
-# count and top_20 occurring words
+# count words
 
 
 def create_dictionary(clean_list):
@@ -64,9 +64,7 @@ def create_dictionary(clean_list):
 		else:
 			word_count[word] = 1
 
-	''' To get the count of each word in
-		the crawled page -->
-
+	# get the count of each word in the crawled page
 	# operator.itemgetter() takes one
 	# parameter either 1(denotes keys)
 	# or 0 (denotes corresponding values)
@@ -75,13 +73,12 @@ def create_dictionary(clean_list):
 					key = operator.itemgetter(1)):
 		print ("% s : % s " % (key, value))
 
-	<-- '''
 
 	c = Counter(word_count)
 
 	# returns the most occurring elements
-	top = c.most_common(10)
-	print(top)
+	unique = c.least_common(10)
+	print(unique)
 
 
 # Driver code
